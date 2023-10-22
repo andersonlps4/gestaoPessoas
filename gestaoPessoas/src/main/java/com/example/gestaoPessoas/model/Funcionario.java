@@ -1,18 +1,17 @@
 package com.example.gestaoPessoas.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
-@Data
+@Table(name= "funcionarios")
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class Funcionario {
 
     @Id
@@ -22,15 +21,12 @@ public class Funcionario {
     @Column(nullable = false)
     private String nome;
 
-    @Column(nullable = false, length = 11)
-    private String cpf;
-
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
 
     @Column(nullable = false)
-    private String telefone;
+    private String departamento;
 
-    @Column (nullable = false)
-    private String matricula;
+    @Column (name = "data_contratacao", nullable = false)
+    private LocalDate dataContratacao;
 }
