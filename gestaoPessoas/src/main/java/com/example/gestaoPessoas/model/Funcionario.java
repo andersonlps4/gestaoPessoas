@@ -30,4 +30,7 @@ public class Funcionario {
 
     @Column(nullable = false)
     private String telefone;
+
+    @Column (nullable = false)
+    private String matricula;
 }
