@@ -1,4 +1,4 @@
-package com.example.gestaoPessoas.Controller.FuncionarioController;
+package com.example.gestaoPessoas.controller;
 
 import com.example.gestaoPessoas.model.Funcionario;
 import com.example.gestaoPessoas.repository.FuncionarioRepository;
